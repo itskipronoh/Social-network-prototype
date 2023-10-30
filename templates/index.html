@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Social Network</title>
+</head>
+<body>
+    <h1>Welcome to the Simple Social Network</h1>
+    <h2>Recent Posts</h2>
+    <ul>
+        {% for post in posts %}
+            <li>{{ post[3] }}: {{ post[1] }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Create a Post</h2>
+    <form method="post" action="/post">
+        <textarea name="content" placeholder="What's on your mind?" rows="4" cols="50"></textarea>
+        <br>
+        <input type="submit" value="Post">
+    </form>
+</body>
+</html>
